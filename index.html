@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Trello Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mini Trello Task Manager</h1>
+        <div class="progress">
+            <span id="progress-text">Progress: 0 / 0 tasks completed</span>
+        </div>
+    </header>
+    <main>
+        <div class="add-task">
+            <input type="text" id="task-input" placeholder="Enter task title">
+            <input type="date" id="due-date-input">
+            <button id="add-task-btn">Add Task</button>
+        </div>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        <div class="board">
+            <div class="column" id="todo">
+                <h2>To Do</h2>
+                <div class="task-list" data-status="pending"></div>
+            </div>
+            <div class="column" id="inprogress">
+                <h2>In Progress</h2>
+                <div class="task-list" data-status="inprogress"></div>
+            </div>
+            <div class="column" id="done">
+                <h2>Done</h2>
+                <div class="task-list" data-status="completed"></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
